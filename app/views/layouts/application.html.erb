@@ -7,7 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="container-fluid">
+    <%if flash[:notice].to_s != "" %>
+      <div class="alert alert-success"><%= flash[:notice] %></div>
+    <%end%>
+    </div>
 <%= yield %>
 
 </body>
