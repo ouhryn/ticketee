@@ -16,6 +16,8 @@
 <div class="container-fluid">
     <%if flash[:notice].to_s != "" %>
       <div class="alert alert-success"><%= flash[:notice] %></div>
+      <%elsif flash[:alert].to_s != "" %>
+      <div class="alert alert-fail"><%= flash[:alert] %></div>
     <%end%>
     </div>
 <%= yield %>
